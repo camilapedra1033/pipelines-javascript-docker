@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: camilapedrapipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: camilapedrapipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: camilapedrapipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: camilapedrapipelinesjavascriptdocker 
+          image: meurepositoriocamila07.azurecr.io/camilapedrapipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
